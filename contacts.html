@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me - Tracy's Art Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', monospace;
+      background-color: #ffe6f0;
+      background-image: url('https://www.transparenttextures.com/patterns/polka-dot.png');
+      background-size: 100px;
+    }
+
+    header {
+      background-color: #ff99cc;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-family: 'Press Start 2P', cursive;
+      color: #fff;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+      color: #fff;
+      background-color: #ff66a3;
+      padding: 6px 12px;
+      border-radius: 10px;
+    }
+
+    nav a:hover {
+      background-color: #ffb6d5;
+    }
+
+    .active {
+      background-color: #fff;
+      color: #ff66a3;
+    }
+
+    .main-container {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .contact-title {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 2rem;
+      color: #ff66a3;
+      margin-bottom: 20px;
+    }
+
+    .contact-message {
+      font-size: 1rem;
+      color: #ffffff;
+      background-color: #ff99cc;
+      padding: 20px;
+      border-radius: 20px;
+      width: 80%;
+      margin: 0 auto 30px;
+    }
+
+    .contact-form {
+      background-color: #ffc1e3;
+      padding: 30px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form label {
+      font-family: 'Press Start 2P', cursive;
+      color: #ffffff;
+      text-align: left;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      border: 2px solid #ffffff;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      background-color: #fff0f5;
+    }
+
+    .submit-btn {
+      background-color: #ff69b4;
+      color: white;
+      padding: 10px;
+      font-size: 1rem;
+      font-family: 'Press Start 2P', cursive;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #ffaec9;
+    }
+
+    .socials {
+      margin-top: 40px;
+      font-family: 'Courier New', monospace;
+      font-size: 1rem;
+      color: #ff66a3;
+    }
+
+  .back-btn {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #ff6699; 
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Press Start 2P', cursive; 
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #ff99cc; 
+}
+
+  </style>
+</head>
+<body>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <header>
+    <div class="logo">
+      <img src="I_have_a_discord_server__who_wants_to_join_-removebg-preview.png" alt="Pink Bow" width="30">
+      <h1>Tracy's Art Gallery</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" class="active">Contact me!</a>
+    </nav>
+  </header>
+
+  <div class="main-container">
+    <h2 class="contact-title">CONTACT ME!</h2>
+    <p class="contact-message">
+      I'd love to hear from you! Whether it's feedback, collaboration, or a simple hello, drop me a message below ♡
+    </p>
+
+    <form class="contact-form" action="mailto:tracylara@gmail.com" method="post" enctype="text/plain">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+
+    <div class="socials">
+      <p>You can also reach me on my socials:</p>
+      <p>
+        Email: tracylara06@gmail.com<br>
+        Instagram: @amthystt<br>
+        Twitter: @t___rexy<br>
+        TikTok: @t___rexy<br>
+        Pinterest: @Amthystt<br>
+      </p>
+    </div>
+
+    <a href="index.html" class="back-btn">Back to Home</a>
+  </div>
+
+</body>
+</html>

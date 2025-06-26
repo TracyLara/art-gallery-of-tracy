@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tracy's Pink Art Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffddee;
+      background-image: radial-gradient(white 8%, transparent 8%);
+      background-size: 40px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Press Start 2P', cursive;
+      text-align: center;
+      color: #ff66cc; 
+    }
+
+    .oval-wrapper {
+      background-color: white;
+      border-radius: 50%;
+      padding: 30px;
+      width: 90%;
+      max-width: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      aspect-ratio: 3 / 2;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .main-image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .explore-btn {
+      background-color: #fb8caa;
+      color: white;
+      font-family: 'Press Start 2P', cursive;
+      border: none;
+      padding: 15px 30px;
+      font-size: 12px;
+      text-transform: uppercase;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px#ffffff;
+      transition: transform 0.1s ease;
+    }
+
+    .explore-btn:active {
+      transform: translateY(4px);
+      box-shadow: 0 0 #cc3399;
+    }
+
+    @media (max-width: 600px) {
+      .explore-btn {
+        font-size: 10px;
+        padding: 12px 24px;
+      }
+
+      .oval-wrapper {
+        padding: 20px;
+      }
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="oval-wrapper">
+    <img src="Welcome_to_Pastel_Pastries_-removebg-preview.png" alt="Welcome to Tracy's Pink Art Gallery" class="main-image">
+  </div>
+
+  <button class="explore-btn" onclick="location.href='about.html'">Explore!</button>
+
+</body>
+</html>

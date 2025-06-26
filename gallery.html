@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arts Categories</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: 'Press Start 2P', cursive;
+      margin: 0;
+      padding: 0;
+    }
+
+    .top-nav {
+      background-color: #ff99cc;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .top-nav .logo {
+      font-size: 16px;
+      color: white;
+      font-family: 'Press Start 2P', cursive;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+       .nav-links a {
+      text-decoration: none;
+      color: white;
+      background-color: transparent;
+      padding: 8px 14px;
+      border-radius: 10px;
+    }
+
+    .nav-links a.active {
+      background-color: white;
+      color: #ff99cc;
+    }
+
+    .gallery-img {
+      display: block;
+      margin: 50px auto 0 auto;
+      max-width: 90%;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 100px;
+      padding: 30px 20px;
+    }
+
+    .art-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 200px;
+    }
+
+    .art-option {
+      cursor: pointer;
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .art-option:hover {
+      transform: rotate(-10deg);
+    }
+
+    .art-option img,
+    .label-img {
+      margin-top: 10px;
+      width: 220px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .label-img {
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .gallery {
+        gap: 60px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .next-btn {
+        font-size: 8px;
+        padding: 10px 14px;
+      }
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="top-nav">
+    <div class="logo">
+      <img src="I_have_a_discord_server__who_wants_to_join_-removebg-preview.png" alt="Bow Icon" width="30" />
+      Tracy's Art Gallery
+    </div>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="contacts.html">Contact me!</a>
+    </div>
+  </div>
+
+  <img class="gallery-img" src="text-1748940564600.png" alt="gallery text image" />
+
+  <div class="gallery">
+    <div class="art-container">
+      <a href="multimedia.html" class="art-option">
+        <img src="Pink_computer_png__-removebg-preview.png" alt="Multimedia Arts" />
+      </a>
+      <img class="label-img" src="text-1748689163334.png" alt="Multimedia Label" />
+    </div>
+
+    <div class="art-container">
+      <a href="visual.html" class="art-option">
+        <img src="download__23_-removebg-preview.png" alt="Visual Arts" />
+      </a>
+      <img class="label-img" src="text-1748689187226.png" alt="Visual Label" />
+    </div>
+
+    <div class="art-container">
+      <a href="performing.html" class="art-option">
+        <img src="download__20_-removebg-preview.png" alt="Performing Arts" />
+      </a>
+      <img class="label-img" src="text-1748689196304.png" alt="Performing Label" />
+    </div>
+
+    <div class="art-container">
+      <a href="applied.html" class="art-option">
+        <img src="download__24_-removebg-preview.png" alt="Applied Arts" />
+      </a>
+      <img class="label-img" src="text-1748689060912.png" alt="Applied Label" />
+    </div>
+  </div>
+</body>
+</html>

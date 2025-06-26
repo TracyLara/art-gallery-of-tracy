@@ -1,0 +1,49 @@
+/* Base styles for body and container */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff0f6; /* light pink background */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* align to bottom */
+  padding-bottom: 50px; /* space from bottom */
+  box-sizing: border-box;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Pink Start Button */
+.btn {
+  background-color: #ff4d6d; /* bright pink */
+  color: white;
+  text-decoration: none;
+  padding: 16px 48px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0 6px 12px rgba(255,77,109,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Zoom effect on click */
+.btn.zoom {
+  transform: scale(1.15);
+  box-shadow: 0 12px 24px rgba(255,77,109,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Optional: Hover effect to enhance interactivity */
+.btn:hover {
+  background-color: #ff3b58;
+  box-shadow: 0 10px 20px rgba(255,59,88,0.6);
+  transform: scale(1.05);
+}
+

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <title>Visual Arts Gallery</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      color: #ff5a99;
+      overflow-x: hidden;
+    }
+
+    .header {
+      font-family: 'Pacifico', cursive;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 2.5rem;
+      color: #ff5a99;
+    }
+
+    .gallery-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 30px;
+    }
+
+    .gallery-item {
+      position: relative;
+      width: 250px;
+      height: 350px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      opacity: 50;
+    }
+
+    .gallery img {
+    border: 5px solid #ff5a99; 
+    border-radius: 10px;    
+    box-sizing: border-box;  
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      flex-direction: column;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+    }
+
+    .close-btn, .nav-btn {
+      position: absolute;
+      font-size: 2rem;
+      color: #fc53c1;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1100;
+    }
+
+    .close-btn {
+      top: 20px;
+      right: 30px;
+    }
+
+    .nav-btn {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .nav-left {
+      left: 30px;
+    }
+
+    .nav-right {
+      right: 30px;
+    }
+
+      .back-btn {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #ff6699; 
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Press Start 2P', cursive; 
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #ff99cc; 
+}
+  </style>
+</head>
+<body>
+
+   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+   <div class="header">Visual Arts</div>
+
+  <div class="gallery-container" id="gallery">
+    <div class="gallery-item"><img src="expressionism.jpg" alt="Art 1"/></div>
+    <div class="gallery-item"><img src="123137151_401082864630868_5260882414602909358_n.jpg" alt="Art 2"/></div>
+    <div class="gallery-item"><img src="245607100_650979892974496_5883046057829233479_n.jpg" alt="Art 3"/></div>
+    <div class="gallery-item"><img src="470469180_1403521957720282_400804326222988932_n.jpg" alt="Art 4"/></div>
+    <div class="gallery-item"><img src="mil.jpg" alt="Art 5"/></div>
+    <div class="gallery-item"><img src="LARA, TRACY MAY M. - BSCS 1-1 (Zine) (5).png" alt="Art 6"/></div>
+    <div class="gallery-item"><img src="received_640769528166502.webp" alt="Art 7"/></div>
+    <div class="gallery-item"><img src="6264728109735593464.jpg" alt="Art 8"/></div>
+    <div class="gallery-item"><img src="6264728109735593465.jpg" alt="Art 9"/></div>
+    <div class="gallery-item"><img src="6264728109735593466.jpg" alt="Art 10"/></div>
+    <div class="gallery-item"><img src="6264728109735593468.jpg" alt="Art 11"/></div>
+    <div class="gallery-item"><img src="6264728109735593470.jpg" alt="Art 12"/></div>
+    <div class="gallery-item"><img src="6264728109735593469.jpg" alt="Art 13"/></div>
+    <div class="gallery-item"><img src="6264728109735593467.jpg" alt="Art 14"/></div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="close-btn" onclick="closeLightbox()">✕</button>
+    <button class="nav-btn nav-left" onclick="prevImage()">◀</button>
+    <img src="" alt="Zoomed Image" id="lightbox-img" />
+    <button class="nav-btn nav-right" onclick="nextImage()">▶</button>
+    <a href="gallery.html" class="back-btn">Back to Selection</a>
+  </div>
+
+  <script>
+    const images = Array.from(document.querySelectorAll('.gallery-item img'));
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    let currentIndex = 0;
+
+    images.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        currentIndex = index;
+        openLightbox(img.src);
+      });
+    });
+
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      lightboxImg.src = images[currentIndex].src;
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      lightboxImg.src = images[currentIndex].src;
+    }
+  </script>
+
+</body>
+</html>
